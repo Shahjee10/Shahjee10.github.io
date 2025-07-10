@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | Syed Ahmed Ali Shah</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     .hero-bg {
       background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
@@ -40,11 +40,31 @@
   </style>
 </head>
 <body class="bg-gray-100 font-sans text-gray-800">
+
   <!-- Navigation -->
   <nav class="bg-white shadow-lg sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-gray-800">Syed Ahmed Ali Shah</h1>
-      <div class="space-x-6">
+      <!-- Social icons replace name -->
+      <div class="flex space-x-3 sm:space-x-4">
+        <a href="https://github.com/Shahjee10" target="_blank" 
+           class="social-icon w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-800 hover:text-white text-lg sm:text-xl transition shadow-md"
+           aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ahmed-shah-b4a458284" target="_blank" 
+           class="social-icon w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-blue-100 hover:bg-blue-700 hover:text-white text-lg sm:text-xl transition shadow-md"
+           aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:ahmedalilm10@gmail.com" 
+           class="social-icon w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-red-100 hover:bg-red-600 hover:text-white text-lg sm:text-xl transition shadow-md"
+           aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <!-- Nav links -->
+      <div class="space-x-4 text-sm sm:text-base">
         <a href="index.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Home</a>
         <a href="about.html" class="text-blue-500 font-semibold">About</a>
         <a href="projects.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Projects</a>
@@ -54,21 +74,24 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero-bg text-white text-center py-20">
-    <div class="container mx-auto px-4 fade-in">
-      <h1 class="text-5xl font-extrabold mb-4">About Me</h1>
-      <p class="text-xl mb-6 max-w-2xl mx-auto">Discover my journey as a passionate developer building innovative mobile and web solutions.</p>
+  <header class="hero-bg text-white text-center py-20 px-4">
+    <div class="container mx-auto max-w-4xl fade-in">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">About Me</h1>
+      <p class="text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">Discover my journey as a passionate developer building innovative mobile and web solutions.</p>
     </div>
   </header>
 
   <!-- About Section -->
-  <section class="container mx-auto px-4 py-20">
-    <div class="about-card max-w-3xl mx-auto text-lg text-gray-700 space-y-6 p-8 rounded-2xl fade-in">
-      <p>I’m a recent graduate with a <strong>BS in Software Engineering</strong> from Riphah International University, Rawalpindi. I have a strong passion for building mobile applications using React Native and enhancing my full stack development skills.</p>
-      <p>My goal is to continue learning and working on real-world projects where I can apply my technical knowledge and grow as a developer. I’m currently seeking internship opportunities in mobile and web development fields.</p>
-      
+  <section class="container mx-auto px-4 py-16">
+    <div class="about-card max-w-3xl mx-auto text-base sm:text-lg text-gray-700 space-y-6 p-6 sm:p-8 rounded-2xl fade-in">
+     <p>I am a passionate and detail-oriented software engineer with a <strong>Bachelor's degree in Software Engineering</strong> from Riphah International University (2025). My expertise lies in building intuitive, scalable mobile applications using <strong>React Native</strong>, and I’m actively expanding my skills in full-stack development.</p>
+
+<p>My educational journey began with a Matriculation from Roots School in 2018, followed by FSc from Global College in 2020, and culminated with my recent graduation from Riphah. During this time, I’ve consistently pursued hands-on learning through self-driven projects that combine modern UI/UX with robust backend logic.</p>
+
+<p>I am currently seeking internship or opportunities in <strong>mobile development</strong> where I can contribute to impactful projects, grow under mentorship, and bring ideas to life using code.</p>
+
       <div>
-        <p class="font-semibold mb-2 text-gray-800">Strengths:</p>
+        <p class="font-semibold mb-3 text-gray-800">Strengths:</p>
         <ul class="list-disc list-inside space-y-2 text-gray-600">
           <li>Proficient in mobile UI and cross-platform development</li>
           <li>Comfortable with REST APIs and full-stack integration</li>
@@ -76,7 +99,7 @@
         </ul>
       </div>
 
-      <div class="pt-4">
+      <div class="pt-6">
         <p class="font-semibold mb-3 text-gray-800">Connect with me:</p>
         <div class="flex space-x-4 items-center justify-center">
           <a href="https://github.com/Shahjee10" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-800 hover:text-white text-2xl transition shadow-md">
@@ -99,5 +122,6 @@
       <p class="text-lg">© 2025 Syed Ahmed Ali Shah | Designed & Built with 💻</p>
     </div>
   </footer>
+
 </body>
 </html>

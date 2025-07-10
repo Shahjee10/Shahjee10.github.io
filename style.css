@@ -49,4 +49,26 @@ footer {
   padding: 1rem;
   background-color: #eee;
   margin-top: 2rem;
+}*/
+
+body {
+  background-color: #f7fafc; /* Tailwind gray-100 */
+  color: #1a202c; /* Tailwind gray-900 */
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Dark mode styles */
+body.dark {
+  background-color: #1a202c; /* Tailwind gray-900 */
+  color: #e2e8f0; /* Tailwind gray-300 */
+}
+
+nav, footer {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Adjust nav and footer colors in dark mode */
+nav.dark, footer.dark {
+  background-color: #2d3748; /* Tailwind gray-800 */
+  color: #cbd5e0; /* Tailwind gray-300 */
 }
