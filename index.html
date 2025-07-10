@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Syed Ahmed Ali Shah</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out both;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .glow-text {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    .gradient-btn {
+      background: linear-gradient(to right, #6366f1, #3b82f6);
+    }
+    .gradient-btn:hover {
+      background: linear-gradient(to right, #4f46e5, #2563eb);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-gray-800">Syed Ahmed Ali Shah</h1>
+      <div class="space-x-6">
+        <a href="index.html" class="text-blue-500 font-semibold">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-blue-500 transition duration-300">About</a>
+        <a href="projects.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Projects</a>
+        <a href="contact.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white text-center py-24">
+    <div class="container mx-auto px-4 fade-in">
+      <img src="Images/portfolio.jpg" alt="Profile" class="w-40 h-40 mx-auto rounded-full mb-6 border-4 border-white shadow-lg object-cover" />
+      <h1 class="text-5xl font-extrabold mb-2 glow-text">Syed Ahmed Ali Shah</h1>
+      <p class="text-xl mb-6 text-gray-300 max-w-2xl mx-auto">
+        React Native Developer | Full Stack Enthusiast passionate about building intuitive and scalable mobile applications.
+      </p>
+      <a href="contact.html" class="gradient-btn text-white px-8 py-3 rounded-lg text-lg transition duration-300 shadow-lg">Let's Connect</a>
+    </div>
+  </header>
+
+  <!-- Intro Section -->
+  <section class="container mx-auto px-4 py-16 text-center">
+    <h2 class="text-3xl font-bold mb-4">Welcome to My Portfolio</h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      Explore my journey through software development, from personal projects to my final year app. I'm constantly learning, building, and pushing the boundaries of mobile-first digital experiences.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-8">
+    <p>&copy; 2025 Syed Ahmed Ali Shah | Built with 💻</p>
+  </footer>
+</body>
+</html>

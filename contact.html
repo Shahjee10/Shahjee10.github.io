@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Syed Ahmed Ali Shah</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-gray-800">Syed Ahmed Ali Shah</h1>
+      <div class="space-x-6">
+        <a href="index.html" class="text-gray-600 hover:text-blue-500 transition">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-blue-500 transition">About</a>
+        <a href="projects.html" class="text-gray-600 hover:text-blue-500 transition">Projects</a>
+        <a href="contact.html" class="text-blue-500 font-semibold">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Header -->
+  <header class="bg-gradient-to-r from-gray-800 to-gray-700 text-white text-center py-20">
+    <div class="container mx-auto px-4">
+      <h1 class="text-5xl font-extrabold mb-4">Let's Talk</h1>
+      <p class="text-lg max-w-xl mx-auto">Have an opportunity or want to collaborate? Send me a message!</p>
+    </div>
+  </header>
+
+  <!-- Contact Form -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="max-w-2xl mx-auto bg-white p-8 shadow-lg rounded-lg">
+      <h2 class="text-2xl font-semibold mb-6 text-gray-800">Send a Message</h2>
+      <form id="contact-form" action="https://formspree.io/f/mrbknqzy" method="POST" class="space-y-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Your Name</label>
+          <input type="text" name="name" required class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Full Name">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Your Email</label>
+          <input type="email" name="email" required class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="you@example.com">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea name="message" rows="5" required class="mt-1 w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="What would you like to say?"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg transition">Send Message</button>
+      </form>
+      <p id="form-status" class="mt-4 text-center text-sm"></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-8">
+    <p>&copy; 2025 Syed Ahmed Ali Shah | Built with 💻</p>
+  </footer>
+
+  <!-- JS for success message -->
+  <script>
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (res.ok) {
+        status.innerText = "✅ Message sent successfully! I'll get back to you soon.";
+        status.classList.add("text-green-600");
+        form.reset();
+      } else {
+        status.innerText = "❌ Oops! Something went wrong. Please try again.";
+        status.classList.add("text-red-600");
+      }
+    });
+  </script>
+</body>
+</html>

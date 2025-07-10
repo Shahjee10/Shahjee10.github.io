@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Movies App",
+    "description": "A movie browsing app with TMDb API integration, watchlist, OTP login, admin panel, and multilingual support.",
+    "tech": "React Native, Node.js, MongoDB, TMDb API",
+    "link": "https://github.com/Shahjee10"
+  },
+  {
+    "title": "QuickWash App",
+    "description": "A vehicle service booking app for customers, service stations, and employees. Role-based dashboards and notifications.",
+    "tech": "React Native, Node.js, MongoDB, Google Maps API",
+    "link": "https://github.com/Shahjee10"
+  }
+]
