@@ -5,146 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Syed Ahmed Ali Shah</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    .hero-bg {
-      background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    body {
+      background-color: #f7fafc;
+      color: #1a202c;
     }
-    .project-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    nav,
+    footer {
+      transition: background-color 0.5s, color 0.5s;
     }
-    .project-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-      border-color: rgba(59, 130, 246, 0.5);
-    }
-    .fade-in {
-      animation: fadeIn 1s ease-in-out;
-    }
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .icon-container {
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-    .icon-container:hover {
-      transform: scale(1.2);
-    }
-    .github-btn:hover i {
-      transform: translateX(5px);
-    }
-    .nav-social-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      margin-right: 0.75rem; /* spacing */
-      border-radius: 9999px;
-      background-color: #f3f4f6; /* Tailwind gray-100 */
-      color: #4b5563; /* Tailwind gray-700 */
+
+    .social-icon {
       transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     }
-    .nav-social-icon:hover {
-      transform: scale(1.3) rotate(5deg);
-      background-color: #3b82f6; /* Tailwind blue-500 */
-      color: white;
+    .social-icon:hover {
+      transform: scale(1.2) rotate(5deg);
     }
-    html {
-      scroll-behavior: smooth;
+
+    .project-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
-<body class="bg-gray-100 font-sans text-gray-800">
-  <!-- Navigation -->
-  <nav class="bg-white shadow-lg sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <!-- Left: social icons -->
-      <div class="flex items-center">
-        <a href="https://github.com/Shahjee10" target="_blank" class="nav-social-icon" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/ahmed-shah-b4a458284" target="_blank" class="nav-social-icon" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="mailto:ahmedalilm10@gmail.com" class="nav-social-icon" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
+<body>
+
+<!-- Navigation -->
+<nav class="bg-white shadow-lg sticky top-0 z-50 flex justify-between items-center px-4 sm:px-6 md:px-8 py-4">
+  <!-- Social Icons -->
+  <div class="flex space-x-3 sm:space-x-4">
+    <a href="https://github.com/Shahjee10" target="_blank" class="social-icon w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-800 hover:text-white text-lg sm:text-xl transition shadow-md" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/ahmed-shah-b4a458284" target="_blank" class="social-icon w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-blue-100 hover:bg-blue-700 hover:text-white text-lg sm:text-xl transition shadow-md" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="mailto:ahmedalilm10@gmail.com" class="social-icon w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-red-100 hover:bg-red-600 hover:text-white text-lg sm:text-xl transition shadow-md" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+
+  <!-- Nav Links -->
+  <div class="space-x-4 text-sm sm:text-base flex items-center">
+    <a href="index.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Home</a>
+    <a href="about.html" class="text-gray-600 hover:text-blue-500 transition duration-300">About</a>
+    <a href="projects.html" class="text-blue-500 font-semibold">Projects</a>
+    <a href="contact.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white text-center py-24 px-4">
+  <div class="container mx-auto max-w-3xl">
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Projects</h1>
+    <p class="text-lg sm:text-xl mb-4 leading-relaxed">Explore my latest apps and web development work showcasing my skills in full stack and mobile technologies.</p>
+  </div>
+</header>
+
+<!-- Projects Section -->
+<section class="container mx-auto px-4 py-16">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="flex items-center space-x-4 mb-4">
+        <i class="fas fa-film text-2xl text-blue-500"></i>
+        <h3 class="text-xl font-semibold">Movies App</h3>
       </div>
+      <p class="text-gray-700 mb-3">A React Native mobile app to browse movies via the TMDb API, with login, OTP verification, multi-language support, genre filters, infinite scroll, and admin panel.</p>
+      <p class="text-sm text-gray-600 mb-1"><strong>Role:</strong> Full Stack Developer</p>
+      <p class="text-sm text-gray-600"><strong>Tech:</strong> React Native, Node.js, MongoDB, TMDb API, JWT</p>
+      <a href="https://github.com/Shahjee10" target="_blank" class="inline-block mt-3 text-blue-600 hover:underline">View on GitHub</a>
+    </div>
 
-      <!-- Right: nav links -->
-      <div class="space-x-6">
-        <a href="index.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Home</a>
-        <a href="about.html" class="text-gray-600 hover:text-blue-500 transition duration-300">About</a>
-        <a href="projects.html" class="text-blue-500 font-semibold">Projects</a>
-        <a href="contact.html" class="text-gray-600 hover:text-blue-500 transition duration-300">Contact</a>
+    <!-- Project 2 -->
+    <div class="project-card">
+      <div class="flex items-center space-x-4 mb-4">
+        <i class="fas fa-car text-2xl text-green-500"></i>
+        <h3 class="text-xl font-semibold">QuickWash App</h3>
       </div>
+      <p class="text-gray-700 mb-3">A service station booking app for customers and service providers with roles, Google Maps integration, and real-time task tracking.</p>
+      <p class="text-sm text-gray-600 mb-1"><strong>Role:</strong> React Native Developer (FYP)</p>
+      <p class="text-sm text-gray-600"><strong>Tech:</strong> React Native, Node.js, MongoDB, Google Maps API</p>
+      <a href="https://github.com/Shahjee10" target="_blank" class="inline-block mt-3 text-blue-600 hover:underline">View on GitHub</a>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <header class="hero-bg text-white text-center py-20">
-    <div class="container mx-auto px-4 fade-in">
-      <h1 class="text-5xl font-extrabold mb-4">My Projects</h1>
-      <p class="text-xl mb-6 max-w-2xl mx-auto">Explore the innovative apps I’ve built with passion and cutting-edge technology.</p>
-    </div>
-  </header>
+  </div>
+</section>
 
-  <!-- Projects Section -->
-  <section class="container mx-auto px-4 py-20">
-    <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900 fade-in">Featured Projects</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="project-card rounded-2xl p-6 md:p-8 fade-in">
-        <div class="flex items-center space-x-4 mb-4">
-          <div class="icon-container text-3xl sm:text-4xl text-blue-500"><i class="fas fa-film"></i></div>
-          <h3 class="text-xl sm:text-2xl font-semibold text-gray-800">Movies App</h3>
-        </div>
-        <p class="text-sm sm:text-base text-gray-600 mb-3">
-          A cross-platform app to explore movies with authentication, watchlist, filtering, and admin dashboard. Features infinite scroll, dark mode, OTP, and localization.
-        </p>
-        <p class="text-xs sm:text-sm text-gray-500"><strong>Role:</strong> Full Stack Developer</p>
-        <p class="text-xs sm:text-sm text-gray-500 mb-3"><strong>Tech Stack:</strong> React Native, Node.js, MongoDB, TMDb API, Tailwind</p>
-        <a href="https://github.com/Shahjee10" target="_blank" class="github-btn inline-flex items-center text-blue-600 hover:text-blue-800 text-sm sm:text-base font-medium transition duration-300">
-          <i class="fab fa-github mr-2"></i> View on GitHub
-        </a>
-      </div>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white text-center py-8">
+  <p>© 2025 Syed Ahmed Ali Shah | Built with 💻</p>
+</footer>
 
-      <div class="project-card rounded-2xl p-6 md:p-8 fade-in">
-        <div class="flex items-center space-x-4 mb-4">
-          <div class="icon-container text-3xl sm:text-4xl text-green-500"><i class="fas fa-car"></i></div>
-          <h3 class="text-xl sm:text-2xl font-semibold text-gray-800">QuickWash App</h3>
-        </div>
-        <p class="text-sm sm:text-base text-gray-600 mb-3">
-          A vehicle service app with real-time tracking, role-based logins (admin, employee, customer), and task automation for service stations.
-        </p>
-        <p class="text-xs sm:text-sm text-gray-500"><strong>Role:</strong> React Native Developer</p>
-        <p class="text-xs sm:text-sm text-gray-500 mb-3"><strong>Tech Stack:</strong> React Native, Node.js, MongoDB, JWT, Google Maps API</p>
-        <a href="https://github.com/Shahjee10" target="_blank" class="github-btn inline-flex items-center text-blue-600 hover:text-blue-800 text-sm sm:text-base font-medium transition duration-300">
-          <i class="fab fa-github mr-2"></i> View on GitHub
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center py-8">
-    <div class="container mx-auto px-4">
-      <p class="text-lg">© 2025 Syed Ahmed Ali Shah | Designed & Built with 💻</p>
-    </div>
-  </footer>
 </body>
 </html>
